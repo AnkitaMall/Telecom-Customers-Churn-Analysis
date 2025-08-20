@@ -1,111 +1,73 @@
-📊 Telecom Customer Churn Analysis
-📌 Project Overview
+# 📊 Telecom Customer Churn Analysis
 
-Customer churn is a major challenge in the telecom industry, as retaining existing customers is often more cost-effective than acquiring new ones. This project focuses on analyzing telecom customer data to identify the factors that contribute to churn and predicting which customers are at high risk of leaving.
+## 📌 Project Overview
+Customer churn is one of the biggest challenges for telecom companies. This project focuses on **predicting and analyzing customer churn** using data analytics techniques. By identifying high-risk customers and key churn factors, businesses can take proactive steps to improve retention.
 
-The analysis combines EDA, feature engineering, risk profiling, and churn prediction modeling to provide actionable business insights.
+---
 
-🎯 Objectives
+## 🎯 Objectives
+- Analyze customer demographics and service usage.  
+- Identify major **risk factors** leading to churn.  
+- Segment customers into **tenure groups** and **monthly charge bins**.  
+- Build KPIs such as **Churn Rate, High-Risk Customers, and Lifetime Value**.  
+- Create an **interactive dashboard** in Tableau for visualization.  
 
-Analyze customer behavior and demographics to understand churn drivers.
+---
 
-Perform Exploratory Data Analysis (EDA) to uncover patterns.
+## 📂 Dataset
+The dataset includes telecom customer details such as:
+- Customer ID  
+- Tenure  
+- Monthly Charges  
+- Payment Method  
+- Internet Service  
+- Contract Type  
+- Churn (Yes/No)  
 
-Engineer features like tenure groups and monthly charge bins for deeper insights.
+---
 
-Develop a High-Risk Scoring system to segment customers by churn probability.
+## ⚙️ Feature Engineering & Risk Factors
+- **Tenure Groups**: Customers with lower tenure showed higher churn probability.  
+- **Monthly Charges Bins**: High-paying customers were more likely to churn if on short contracts.  
+- **Payment Method**: Customers using electronic checks churned more compared to those using auto-pay/credit card.  
+- **Contract Type**: Month-to-month contracts had the highest churn risk.  
+- **Internet Service**: Fiber-optic users churned more than DSL users.  
 
-Provide business recommendations to reduce churn.
+---
 
-📂 Dataset
+## 📊 KPIs
+- **Churned Customers** → Total number of customers who churned.  
+- **Churn Rate** → `(Churned Customers / Total Customers) * 100`.  
+- **High-Risk Segment** → Top 10 customers by churn probability based on risk factors.  
 
-The dataset contains customer-level information from a telecom company, including:
+---
 
-📞 Customer demographics (gender, senior citizen, partner, dependents)
+## 🚀 Tools & Technologies
+- **Data Cleaning & Feature Engineering** → SQL 
+- **Exploratory Data Analysis (EDA)** → SQL  
+- **Dashboard Visualization** → Tableau  
+- **Version Control** → GitHub  
 
-📶 Services (phone, multiple lines, internet, online security, streaming, etc.)
+---
 
-💳 Account information (tenure, contract type, payment method, charges)
+## 📈 Dashboard (Tableau) Highlights
+- **Overall Churn Rate & Total Customers**  
+- **Churn Breakdown by Tenure, Monthly Charges, Contract, Internet Service**  
+- **Interactive Filters** for customer segmentation  
 
-🎯 Churn (Yes/No — target variable)
+---
 
-🔍 Exploratory Data Analysis (EDA)
+## 🔑 Key Insights
+- Customers with **short tenure (< 12 months)** and **high monthly charges** are most at risk.  
+- **Month-to-Month contracts** and **Electronic Check payments** significantly increase churn probability.  
+- **Long-term contracts (1-year or 2-year)** with auto-payment methods reduce churn.  
+- Fiber-optic users have a higher churn rate compared to DSL users.  
 
-Key insights from data analysis:
+---
 
-Churn Rate: ~26% of customers have churned.
+## 📌 Conclusion
+By identifying high-risk customers and churn patterns, telecom companies can **develop targeted retention strategies**, such as offering discounts for long-term contracts, encouraging auto-pay enrollment, and providing better support for fiber-optic users.
 
-Tenure: Customers in the first 12 months are the most likely to churn.
 
-Monthly Charges: Higher charges are strongly correlated with churn.
 
-Contract Type: Month-to-month contracts show the highest churn, while 2-year contracts are the most stable.
 
-Payment Method: Customers using electronic checks churn the most.
-
-Internet Service: Fiber optic users churn more than DSL users.
-
-🛠 Feature Engineering & Risk Factors
-
-Tenure Groups: Segmented into bins (0–12 months, 13–24 months, etc.).
-
-Monthly Charge Bins: Customers categorized into low, medium, and high spenders.
-
-Risk Factors: High churn risk associated with:
-
-Low tenure (0–12 months)
-
-High monthly charges
-
-Month-to-month contracts
-
-Electronic check payment
-
-Fiber optic internet service
-
-📊 High-Risk Customer Profile
-Factor	High-Risk Category	Low-Risk Category
-Tenure	0–12 months	24+ months
-Monthly Charges	High charges	Low charges
-Contract Type	Month-to-month	2-year contract
-Payment Method	Electronic check	Auto-pay (credit/bank)
-Internet Service	Fiber optic	DSL / No Internet
-⚙️ Tech Stack
-
-Python 🐍
-
-Pandas, NumPy → Data manipulation
-
-Matplotlib, Seaborn → Visualization
-
-Scikit-learn → Machine learning models (Logistic Regression, Decision Trees, etc.)
-
-Tableau / Power BI → Dashboard for interactive insights
-
-📈 Model Performance
-
-Built predictive models to classify churn.
-
-Achieved accuracy of X% and ROC-AUC score of Y% (replace with your actual metrics).
-
-Logistic Regression and Decision Tree provided interpretable insights for business users.
-
-💡 Business Recommendations
-
-Retention Offers: Provide discounts for customers with high monthly charges.
-
-Contract Migration: Encourage month-to-month users to switch to yearly contracts with incentives.
-
-Payment Optimization: Promote auto-pay options to reduce churn risk.
-
-Fiber Optic Plans: Improve pricing/quality to reduce churn among fiber optic users.
-
-Onboarding Support: Focus retention efforts on customers in their first 12 months.
-
-📌 Dashboard
-
-Created an interactive dashboard (Tableau) showing:
-
-Churn rate overview
-
-Key factors contributing to churn
